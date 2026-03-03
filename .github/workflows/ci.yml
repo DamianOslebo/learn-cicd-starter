@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  style:
+  Style:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Formatting
         run: test -z $(go fmt ./...)
-        
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
