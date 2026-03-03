@@ -13,7 +13,7 @@ func TestAuthorizationAPIKey(t *testing.T) {
 	_, err := GetAPIKey(header)
 	assert.ErrorIs(t, err, ErrNoAuthHeaderIncluded)
 
-	req, err := http.NewRequest("", "", nil)
+	req, _ := http.NewRequest("", "", nil)
 	header = req.Header
 
 	// Test no apikey header
